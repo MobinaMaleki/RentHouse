@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="container" dir="rtl">
+
+    <form action="/House/Update" method="post" enctype="multipart/form-data">
+        <br />
+        <div class="form-group col-md-6" style="margin-right:270px" dir="rtl">
+            <label for="uname">  کد ملک </label>
+            <input type="text" class="form-control" id="Id" name="Id" value=" @ViewBag.house.Id">
+        </div>
+        <div class="form-group col-md-6" style="margin-right:270px" dir="rtl">
+            <label for="uname"> مالک </label>
+            <select class="form-control" id="OwnerID" name="OwnerID">
+                @Html.Raw(ViewBag.Owner)
+            </select>
+        </div>
+
+        <div class="form-group col-md-6" style="margin-right:270px" dir="rtl">
+            <label for="uname">  نام </label>
+            <input type="text" class="form-control" id="Name" name="Name" value=" @ViewBag.house.Name">
+        </div>
+
+
+        <div class="form-group col-md-6" style="margin-right:270px">
+            <label for="uname" dir="rtl"> متراژ </label>
+            <input type="text" class="form-control" id="HouseArea" name="HouseArea" value=" @ViewBag.house.HouseArea">
+        </div>
+
+        <div class="form-group col-md-6" style="margin-right:270px" dir="rtl">
+            <label for="uname">  آدرس</label>
+            <input type="text" class="form-control" id="Address" name="Address" value=" @ViewBag.house.Address">
+        </div>
+
+        <div class="form-group col-md-6" style="margin-right:270px" dir="rtl">
+            <label for="uname"> موقعیت </label>
+            <select class="form-control" id="situation" name="situation">
+                @Html.Raw(ViewBag.situation)
+            </select>
+        </div>
+
+        <div class="form-group col-md-6" style="margin-right:270px">
+            <button type="submit" class="btn btn-block btn-success " style="color:white">بروزرسانی</button>
+        </div>
+    </form>
+</div>

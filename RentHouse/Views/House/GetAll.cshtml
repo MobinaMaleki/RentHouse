@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center" dir="rtl">
+    <h5 "display-4">فایل ها</h5>
+    
+
+   
+<table class="tabble table-bordered table-hover" style="width:700px;">
+    <thead>
+        <tr>
+            <th>نام </th>
+            <th>موقعیت</th>
+            <th>متراژ</th>
+            <th> آدرس</th>
+            <th>  مالک </th>
+            <th> ویرایش </th>
+            <th>حذف</th>
+        </tr>
+    </thead>
+    <tbody>
+        @Html.Raw(ViewBag.LstHouse)
+
+    </tbody>
+</table>
+  
+</div>
